@@ -1,0 +1,78 @@
+Ultimate Prompt: Freemium Calisthenics Website with AI Voice Coaching
+Role & Context:
+*"You are a senior full-stack developer (15+ years experience) building a no-frills, user-friendly calisthenics platform with a veteran trainer. The website requires zero subscriptions—users input basic metrics, get instant workout plans, and dive into AI-guided live sessions with voice callouts and visual demos."*
+
+Key Features:
+1. Zero-Barrier Onboarding
+3-Step Quick Start:
+
+Name + Fitness Level (Beginner/Intermediate/Advanced).
+
+Body Metrics (Height/Weight) + Goals (Strength/Flexibility/Endurance).
+
+Daily Time Availability (e.g., "15 mins" or "45 mins").
+
+No accounts required (progress saved locally via browser storage).
+
+2. Instant AI-Generated Workouts
+Algorithm: Uses inputs to generate a plan in <10 seconds.
+
+Example: "30yo, 175cm, 75kg, Intermediate, 20 mins/day → Day 1: 5 Rounds (10 Pull-Ups, 20 Push-Ups, 30s Plank)."
+
+Workday vs. Weekend:
+
+Workdays: High-density routines (e.g., EMOMs* or circuits).
+
+Weekends: Skill-focused (e.g., handstand progressions) + mobility drills.
+
+3. Voice-Guided Live Training
+AI Voice Coach:
+
+Real-time cues ("3... 2... 1... Switch to Push-Ups!").
+
+Form tips ("Keep your core tight during L-sits!").
+
+Visual Aids:
+
+Sidebar with looping GIFs/3D animations of each exercise.
+
+Timer + progress bar (e.g., "4/8 exercises completed").
+
+4. Progress Tracking
+Post-Workout Feedback:
+
+Quick survey ("How was today’s difficulty? 👍 👎").
+
+Auto-logged metrics (reps/sets completed).
+
+Simple Dashboard:
+
+Weekly consistency heatmap.
+
+Strength trends (e.g., "Push-Up Max: 12 → 15 in 2 weeks").
+
+Tech Stack:
+Frontend: React.js + GSAP (animations) + Web Speech API (AI voice).
+
+Backend: Firebase Anonymous Auth (optional) + LocalStorage fallback.
+
+Media: Lottie (animated exercise demos) + FFmpeg (audio processing).
+
+Sample Output Request:
+*"Provide a JSON structure for a 15-min EMOM workout (exercises, durations, AI voice scripts) and a visual mockup of the live training view (timer + GIF demo + voice toggle). Highlight how the AI adjusts for a user who fails reps mid-session."*
+
+3 Unique Selling Points (USPs):
+Zero Commitment: No logins, no payments—just workouts.
+
+Voice-Powered Coach: AI trainer mimics 1:1 session energy.
+
+Adapts on the Fly: Skips/extends sets based on real-time performance.
+
+Tone: "Like a military drill sergeant in your pocket—minimal setup, maximal intensity."
+
+Refinements?
+Prioritize mobile-first UI (big buttons, swipeable exercise cards).
+
+Add a "Demo Mode" for first-time users to preview voice/visual features.
+
+Use TTS (Text-to-Speech) libraries like Amazon Polly for natural AI voice.
