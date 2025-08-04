@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
+import { useLocation } from "wouter";
 import { 
   TrendingUp, 
   Calendar, 
@@ -21,6 +22,7 @@ import StatsCard from "@/components/progress/stats-card";
 import type { WorkoutSession, UserProfile } from "@shared/schema";
 
 export default function Progress() {
+  const [, setLocation] = useLocation();
   const [userProfile] = useLocalStorage<UserProfile | null>('userProfile', null);
   const [workoutSessions] = useLocalStorage<WorkoutSession[]>('workoutSessions', []);
   const [selectedPeriod, setSelectedPeriod] = useState<'week' | 'month' | 'year'>('month');
@@ -127,7 +129,7 @@ export default function Progress() {
               <span className="text-xl font-bold text-gray-900">CalisthenIQ</span>
             </div>
             <Button
-              onClick={() => window.location.href = '/'}
+              onClick={() => setLocation('/')}
               variant="ghost"
               className="text-gray-600 hover:text-gray-900"
             >
@@ -142,7 +144,7 @@ export default function Progress() {
             <CardContent className="p-8 text-center">
               <h2 className="text-2xl font-bold mb-4 text-gray-900">No Profile Found</h2>
               <p className="text-gray-600 mb-6">Create your profile to start tracking progress.</p>
-              <Button onClick={() => window.location.href = '/onboarding'} className="bg-blue-500 hover:bg-blue-600 text-white">
+              <Button onClick={() => setLocation('/onboarding')} className="bg-blue-500 hover:bg-blue-600 text-white">
                 Create Profile
               </Button>
             </CardContent>
@@ -164,7 +166,7 @@ export default function Progress() {
             <span className="text-xl font-bold text-gray-900">CalisthenIQ</span>
           </div>
           <Button
-            onClick={() => window.location.href = '/'}
+            onClick={() => setLocation('/')}
             variant="ghost"
             className="text-gray-600 hover:text-gray-900"
           >

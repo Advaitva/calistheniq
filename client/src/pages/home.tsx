@@ -597,7 +597,12 @@ export default function Home() {
                   <p className="text-gray-600 mb-4">{workout.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm font-medium text-blue-600">{workout.type}</span>
-                    <Button variant="outline" size="sm">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="border-gray-300 text-gray-900 hover:bg-gray-50 hover:text-gray-900"
+                      onClick={() => setLocation("/generate")}
+                    >
                       <Play className="w-4 h-4 mr-2" />
                       Start
                     </Button>
