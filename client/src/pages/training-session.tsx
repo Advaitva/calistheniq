@@ -326,26 +326,19 @@ export default function TrainingSession() {
           </div>
           <div className="flex items-center space-x-4">
             <Button
-              onClick={() => setLocation('/progress')}
+              onClick={() => setLocation('/training')}
               variant="ghost"
               className="text-gray-300 hover:text-white"
             >
-              Progress
-            </Button>
-            <Button
-              onClick={() => setLocation('/generate')}
-              variant="ghost"
-              className="text-gray-300 hover:text-white"
-            >
-              Workouts
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Training Dashboard
             </Button>
             <Button
               onClick={() => setLocation('/')}
               variant="ghost"
               className="text-gray-300 hover:text-white"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Exit Workout
+              Home
             </Button>
           </div>
         </div>

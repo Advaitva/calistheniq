@@ -8,6 +8,7 @@ import Home from "@/pages/home";
 import Onboarding from "@/pages/onboarding";
 import WorkoutGenerator from "@/pages/workout-generator";
 import TrainingSession from "@/pages/training-session";
+import TrainingDashboard from "@/pages/training-dashboard";
 import Progress from "@/pages/progress";
 import Demo from "@/pages/demo";
 function Router() {
@@ -18,6 +19,7 @@ function Router() {
         <Route path="/onboarding" component={Onboarding} />
         <Route path="/generate" component={WorkoutGenerator} />
         <Route path="/training/:workoutId?" component={TrainingSession} />
+        <Route path="/training" component={TrainingDashboard} />
         <Route path="/progress" component={Progress} />
         <Route path="/demo" component={Demo} />
         <Route component={NotFound} />

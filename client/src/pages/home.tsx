@@ -55,8 +55,8 @@ export default function Home() {
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#features" className="text-white/80 hover:text-white transition-colors">Features</a>
-            <a href="#training" className="text-white/80 hover:text-white transition-colors">Training</a>
-            <a href="#progress" className="text-white/80 hover:text-white transition-colors">Progress</a>
+            <button onClick={() => setLocation("/generate")} className="text-white/80 hover:text-white transition-colors">Training</button>
+            <button onClick={() => setLocation("/progress")} className="text-white/80 hover:text-white transition-colors">Progress</button>
             <Button onClick={() => setLocation("/onboarding")} className="bg-blue-500 hover:bg-blue-600 text-white">
               Get Started
             </Button>
