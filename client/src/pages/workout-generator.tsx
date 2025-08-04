@@ -82,22 +82,22 @@ export default function WorkoutGenerator() {
   const selectedWorkoutType = workoutTypeOptions.find(option => option.value === workoutType);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen charcoal-bg text-foreground">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
+      <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
               <Dumbbell className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold">CalisthenIQ</span>
+            <span className="text-xl font-bold text-foreground">CalisthenIQ</span>
           </div>
           <div className="flex items-center space-x-4">
             <ThemeToggle />
             <Button
               onClick={() => setLocation('/')}
               variant="ghost"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+              className="text-muted-foreground hover:text-foreground"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Home

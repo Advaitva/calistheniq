@@ -118,22 +118,22 @@ export default function Onboarding() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-black">
+    <div className="min-h-screen charcoal-bg">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
+      <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
               <Dumbbell className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold">CalisthenIQ</span>
+            <span className="text-xl font-bold text-foreground">CalisthenIQ</span>
           </div>
           <div className="flex items-center space-x-4">
             <ThemeToggle />
             <Button
               onClick={handleBack}
               variant="ghost"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+              className="text-muted-foreground hover:text-foreground"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back
@@ -201,7 +201,7 @@ export default function Onboarding() {
             transition={{ duration: 0.5 }}
             className="max-w-2xl mx-auto"
           >
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="charcoal-card rounded-2xl p-8 md:p-12">
               {/* Step 1: Your Profile */}
               {currentStep === 1 && (
                 <div className="space-y-8">

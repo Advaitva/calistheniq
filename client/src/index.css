@@ -3,30 +3,31 @@
 @tailwind utilities;
 
 :root {
+  /* Light Theme - Clean and bright */
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(240, 10%, 3.9%);
-  --muted: hsl(240, 4.8%, 95.9%);
-  --muted-foreground: hsl(240, 3.8%, 46.1%);
+  --foreground: hsl(210, 11%, 15%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 16%, 47%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(210, 11%, 15%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(240, 10%, 3.9%);
-  --border: hsl(240, 5.9%, 90%);
-  --input: hsl(240, 5.9%, 90%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(240, 4.8%, 95.9%);
-  --secondary-foreground: hsl(240, 5.9%, 10%);
-  --accent: hsl(240, 4.8%, 95.9%);
-  --accent-foreground: hsl(240, 5.9%, 10%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 5%, 64.9%);
-  --radius: 0.5rem;
+  --card-foreground: hsl(210, 11%, 15%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(0, 0%, 100%);
+  --primary: hsl(210, 11%, 15%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(210, 11%, 15%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(210, 11%, 15%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(210, 11%, 15%);
+  --radius: 0.75rem;
 
   /* CalisthenIQ Brand Colors */
-  --calistheniq-dark: hsl(240, 6%, 6%);
-  --calistheniq-charcoal: hsl(240, 4%, 10%);
+  --calistheniq-dark: hsl(210, 11%, 8%);
+  --calistheniq-charcoal: hsl(210, 11%, 15%);
   --calistheniq-orange: hsl(15, 100%, 60%);
   --calistheniq-amber: hsl(43, 100%, 50%);
   --calistheniq-electric: hsl(195, 100%, 50%);
@@ -34,25 +35,26 @@
 }
 
 .dark {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 4.9%, 83.9%);
+  /* Dark Theme - Charcoal black with dark schematics */
+  --background: hsl(210, 11%, 8%);
+  --foreground: hsl(0, 0%, 95%);
+  --muted: hsl(210, 11%, 18%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --popover: hsl(210, 11%, 12%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --card: hsl(210, 11%, 12%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --border: hsl(210, 11%, 18%);
+  --input: hsl(210, 11%, 15%);
+  --primary: hsl(0, 0%, 95%);
+  --primary-foreground: hsl(210, 11%, 8%);
+  --secondary: hsl(210, 11%, 18%);
+  --secondary-foreground: hsl(0, 0%, 95%);
+  --accent: hsl(210, 11%, 18%);
+  --accent-foreground: hsl(0, 0%, 95%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 95%);
+  --ring: hsl(0, 0%, 95%);
 }
 
 @layer base {
@@ -69,9 +71,12 @@
 
 @layer components {
   .glass-morphism {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    @apply bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10;
+    transition: all 0.3s ease;
+  }
+
+  .glass-morphism:hover {
+    @apply bg-white/20 dark:bg-white/10 border-white/30 dark:border-white/20;
   }
 
   .gradient-text {
@@ -82,53 +87,53 @@
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, hsl(var(--calistheniq-orange)), hsl(var(--calistheniq-amber))) !important;
-    color: white !important;
+    @apply bg-white text-black dark:bg-gray-100 dark:text-black border-0;
     font-weight: 700;
     transition: all 0.3s ease;
-    border: none;
   }
 
   .btn-primary:hover {
-    background: linear-gradient(135deg, hsl(var(--calistheniq-orange)), hsl(var(--calistheniq-amber))) !important;
-    color: white !important;
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 107, 53, 0.4);
+    @apply bg-gray-100 text-black dark:bg-white dark:text-black transform scale-105;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
 
   .btn-glass {
-    background: rgba(255, 255, 255, 0.05) !important;
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: white !important;
+    @apply bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 text-black dark:text-white;
     font-weight: 600;
     transition: all 0.3s ease;
   }
 
   .btn-glass:hover {
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: white !important;
+    @apply bg-white/20 dark:bg-white/10 border-white/30 dark:border-white/20 text-black dark:text-white;
   }
 
-  /* Fix button default styling for better visibility */
+  /* Enhanced button styling for charcoal theme */
   .btn-default {
-    @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600;
+    @apply bg-white text-black dark:bg-card dark:text-card-foreground border border-border;
     transition: all 0.3s ease;
   }
 
   .btn-default:hover {
-    @apply bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white;
+    @apply bg-muted text-muted-foreground dark:bg-muted dark:text-muted-foreground;
   }
 
-  /* Ensure button text is always visible */
+  /* Disabled states */
   .btn-primary:disabled {
-    background: rgba(255, 107, 53, 0.5) !important;
-    color: rgba(255, 255, 255, 0.7) !important;
+    @apply bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-400 transform-none;
+    box-shadow: none;
   }
 
   .btn-glass:disabled {
-    background: rgba(255, 255, 255, 0.02) !important;
-    color: rgba(255, 255, 255, 0.3) !important;
+    @apply bg-white/5 dark:bg-white/[0.02] text-gray-400 dark:text-gray-600 border-white/10 dark:border-white/5;
+  }
+
+  /* Charcoal black theme backgrounds */
+  .charcoal-bg {
+    @apply bg-white dark:bg-background;
+  }
+
+  .charcoal-card {
+    @apply bg-white dark:bg-card border border-border shadow-lg;
   }
 }
 
