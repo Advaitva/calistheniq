@@ -175,8 +175,8 @@ export default function Progress() {
       </nav>
 
       <div className="pt-24 pb-12">
-        <div className="container mx-auto px-4 max-w-6xl">
-        {/* Header */}
+          <div className="container mx-auto px-4 max-w-6xl">
+            {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -504,6 +504,7 @@ export default function Progress() {
             </Card>
           </TabsContent>
         </Tabs>
+          </div>
       </div>
     </div>
   );

@@ -338,8 +338,8 @@ export default function TrainingSession() {
       </nav>
 
       <div className="pt-24 pb-12">
-        <div className="container mx-auto px-4 max-w-6xl">
-        {/* Workout Header */}
+          <div className="container mx-auto px-4 max-w-6xl">
+            {/* Workout Header */}
         <div className="mb-6">
           <h1 className="text-2xl font-bold gradient-text mb-2">{currentWorkout.name}</h1>
           <div className="flex items-center justify-between">
@@ -444,6 +444,7 @@ export default function TrainingSession() {
             )}
           </div>
         </div>
+          </div>
       </div>
     </div>
   );
