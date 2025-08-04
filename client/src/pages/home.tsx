@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dumbbell, Bolt, Mic, Brain, Play, Video, Shield, Star, Users, Target, CheckCircle, ArrowRight, Zap, Heart, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -57,6 +58,7 @@ export default function Home() {
             <a href="#features" className="text-white/80 hover:text-white transition-colors">Features</a>
             <button onClick={() => setLocation("/generate")} className="text-white/80 hover:text-white transition-colors">Training</button>
             <button onClick={() => setLocation("/progress")} className="text-white/80 hover:text-white transition-colors">Progress</button>
+            <ThemeToggle />
             <Button onClick={() => setLocation("/onboarding")} className="bg-blue-500 hover:bg-blue-600 text-white">
               Get Started
             </Button>

@@ -8,7 +8,8 @@ import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { motion } from "framer-motion";
-import { Zap, Clock, Target, Play, ArrowLeft, Loader2 } from "lucide-react";
+import { Zap, Clock, Target, Play, ArrowLeft, Loader2, Dumbbell } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { apiRequest } from "@/lib/queryClient";
 import type { UserProfile, Workout, GenerateWorkoutRequest } from "@shared/schema";
@@ -48,8 +49,16 @@ export default function WorkoutGenerator() {
   });
 
   if (!userProfile) {
-    setLocation('/onboarding');
-    return null;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-gray-600 mb-4">Please complete your profile first.</p>
+          <Button onClick={() => setLocation('/onboarding')} className="bg-blue-500 hover:bg-blue-600 text-white">
+            Go to Onboarding
+          </Button>
+        </div>
+      </div>
+    );
   }
 
   const handleGenerateWorkout = () => {
@@ -73,9 +82,33 @@ export default function WorkoutGenerator() {
   const selectedWorkoutType = workoutTypeOptions.find(option => option.value === workoutType);
 
   return (
-    <div className="min-h-screen pt-24 pb-12">
-      <div className="container mx-auto px-4 max-w-4xl">
-        {/* Header */}
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+              <Dumbbell className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold">CalisthenIQ</span>
+          </div>
+          <div className="flex items-center space-x-4">
+            <ThemeToggle />
+            <Button
+              onClick={() => setLocation('/')}
+              variant="ghost"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Home
+            </Button>
+          </div>
+        </div>
+      </nav>
+
+      <div className="pt-24 pb-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -294,6 +327,7 @@ export default function WorkoutGenerator() {
               Back to Profile
             </Button>
           </motion.div>
+        </div>
         </div>
       </div>
     </div>

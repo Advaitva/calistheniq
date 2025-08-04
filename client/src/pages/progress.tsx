@@ -19,6 +19,7 @@ import {
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import Heatmap from "@/components/progress/heatmap";
 import StatsCard from "@/components/progress/stats-card";
+import { ThemeToggle } from "@/components/theme-toggle";
 import type { WorkoutSession, UserProfile } from "@shared/schema";
 
 export default function Progress() {
@@ -128,14 +129,17 @@ export default function Progress() {
               </div>
               <span className="text-xl font-bold text-gray-900">CalisthenIQ</span>
             </div>
-            <Button
-              onClick={() => setLocation('/')}
-              variant="ghost"
-              className="text-gray-600 hover:text-gray-900"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Home
-            </Button>
+            <div className="flex items-center space-x-4">
+              <ThemeToggle />
+              <Button
+                onClick={() => setLocation('/')}
+                variant="ghost"
+                className="text-gray-600 hover:text-gray-900"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Home
+              </Button>
+            </div>
           </div>
         </nav>
 

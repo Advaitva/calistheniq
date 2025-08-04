@@ -9,6 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, User, Target, Clock, Dumbbell, CheckCircle } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import type { UserProfile } from "@shared/schema";
 
@@ -117,24 +118,27 @@ export default function Onboarding() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-black">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+      <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
               <Dumbbell className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">CalisthenIQ</span>
+            <span className="text-xl font-bold">CalisthenIQ</span>
           </div>
-          <Button
-            onClick={handleBack}
-            variant="ghost"
-            className="text-gray-600 hover:text-gray-900"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back
-          </Button>
+          <div className="flex items-center space-x-4">
+            <ThemeToggle />
+            <Button
+              onClick={handleBack}
+              variant="ghost"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back
+            </Button>
+          </div>
         </div>
       </nav>
 
@@ -219,7 +223,7 @@ export default function Onboarding() {
                         placeholder="Enter your name"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        className="h-12 text-lg border-gray-200 focus:border-blue-500 focus:ring-blue-500"
+                        className="h-12 text-lg border-gray-200 focus:border-blue-500 focus:ring-blue-500 bg-white dark:bg-input"
                       />
                     </div>
 

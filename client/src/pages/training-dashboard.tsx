@@ -18,6 +18,7 @@ import {
   CheckCircle,
   BarChart3
 } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import type { WorkoutSession, UserProfile, Workout } from "@shared/schema";
 
@@ -131,6 +132,7 @@ export default function TrainingDashboard() {
             <span className="text-xl font-bold text-gray-900">CalisthenIQ</span>
           </div>
           <div className="flex items-center space-x-4">
+            <ThemeToggle />
             <Button
               onClick={() => setLocation('/generate')}
               className="bg-blue-500 hover:bg-blue-600 text-white"
