@@ -13,7 +13,9 @@ import {
   Home, 
   ThumbsUp, 
   ThumbsDown,
-  Timer as TimerIcon
+  Timer as TimerIcon,
+  Dumbbell,
+  ArrowLeft
 } from "lucide-react";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { useVoiceCoach } from "@/hooks/use-voice-coach";
@@ -163,7 +165,7 @@ export default function TrainingSession() {
       // Save workout session
       if (currentWorkout && userProfile) {
         const sessionData = {
-          userId: userProfile.userId || 'anonymous',
+          userId: (userProfile as any).userId || 'anonymous',
           workoutId: currentWorkout.id,
           duration: Math.floor((Date.now() - workoutState.startTime) / 1000 / 60),
           exercisesCompleted: exercises.map((ex: Exercise) => ({
@@ -312,8 +314,31 @@ export default function TrainingSession() {
   }
 
   return (
-    <div className="min-h-screen pt-24 pb-12">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-gray-800">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-amber-500 rounded-lg flex items-center justify-center">
+              <Dumbbell className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold text-white">CalisthenIQ</span>
+          </div>
+          <div className="flex items-center space-x-4">
+            <Button
+              onClick={() => setLocation('/')}
+              variant="ghost"
+              className="text-gray-300 hover:text-white"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Exit Workout
+            </Button>
+          </div>
+        </div>
+      </nav>
+
+      <div className="pt-24 pb-12">
+        <div className="container mx-auto px-4 max-w-6xl">
         {/* Workout Header */}
         <div className="mb-6">
           <h1 className="text-2xl font-bold gradient-text mb-2">{currentWorkout.name}</h1>
