@@ -10,13 +10,9 @@ import WorkoutGenerator from "@/pages/workout-generator";
 import TrainingSession from "@/pages/training-session";
 import Progress from "@/pages/progress";
 import Demo from "@/pages/demo";
-import Navbar from "@/components/layout/navbar";
-import Footer from "@/components/layout/footer";
-
 function Router() {
   return (
-    <div className="min-h-screen bg-calistheniq-dark text-white">
-      <Navbar />
+    <div className="min-h-screen bg-gray-50 text-gray-900">
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/onboarding" component={Onboarding} />
@@ -26,7 +22,6 @@ function Router() {
         <Route path="/demo" component={Demo} />
         <Route component={NotFound} />
       </Switch>
-      <Footer />
     </div>
   );
 }

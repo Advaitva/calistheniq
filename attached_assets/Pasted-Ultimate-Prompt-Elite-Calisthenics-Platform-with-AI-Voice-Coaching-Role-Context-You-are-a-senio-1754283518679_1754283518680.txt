@@ -1,0 +1,85 @@
+Ultimate Prompt: Elite Calisthenics Platform with AI Voice Coaching
+Role & Context:
+"You are a senior full-stack developer (15+ years experience) building a premium, user-centric calisthenics platform. The experience is designed to be elegant and intuitive, echoing the minimalist yet powerful design philosophy of brands like Apple, Cred, and Figma. The platform operates on a freemium model: users get instant, high-quality workouts with no subscription, while optional premium features are available to enhance the journey. Your goal is to create a platform that not only works flawlessly but also feels visually and intellectually satisfying to use."
+
+Key Features:
+
+Elegant Onboarding with Zero Friction
+
+Guided Introduction: A beautifully animated, step-by-step flow instead of a rigid form.
+
+Step 1: Your Profile: A clean, minimalist screen asks for your name and fitness level (Novice / Proficient / Master).
+
+Step 2: Your Objectives: Visually rich cards present choices for body metrics (Height / Weight) and goals (Build Strength / Enhance Flexibility / Boost Endurance).
+
+Step 3: Your Commitment: An elegant, fluid slider or interactive wheel sets the daily time commitment (e.g., "15 mins" or "45 mins").
+
+Zero-Barrier Entry: No accounts, no email, no payment upfront. Progress is seamlessly saved locally, prioritizing user privacy and immediate access.
+
+Instant, Intelligent Workouts
+
+Predictive AI Algorithm: Generates a visually compelling, personalized plan in under 10 seconds.
+
+Strategic Planning:
+
+Workday Routines: Focus on high-density, efficient routines (EMOMs, AMRAPs, or targeted circuits) to maximize impact in minimal time.
+
+Weekend Routines: Dedicated to skill development (e.g., Handstand Progression, Front Lever Training) and restorative mobility flows.
+
+Immersive Live Training with a Dynamic AI Coach
+
+AI Coach: A premium, natural-sounding voice (using a service like Amazon Polly or Eleven Labs) provides real-time guidance. The tone is motivating and precise, like a personal trainer.
+
+Dynamic Cues: "Transition in 3... 2... 1... to Push-Ups. Keep your shoulders packed."
+
+Refined Form Tips: "Remember to maintain a hollow body position throughout the L-sit."
+
+High-Fidelity Visuals:
+
+A prominent, central 3D graphic model performing each exercise with fluid, anatomically correct animations. The model's form is flawless, serving as a perfect visual guide.
+
+A sleek, unobtrusive progress bar and timer. The UI uses subtle, animated cues (e.g., a pulsing ring, a color transition) to signal transitions between exercises and rest periods.
+
+Effortless Progress Visualization
+
+Post-Workout Reflection: A single, well-designed feedback screen asks, "How was your session today?" with options ranging from "Effortless" to "Intense."
+
+Automated Metrics: Reps and sets are automatically logged. The system can even use the user's feedback to adjust future workouts.
+
+Sleek Dashboard: A minimalist, data-driven dashboard shows:
+
+A beautifully designed weekly consistency heatmap.
+
+Clean, easily digestible strength trend graphs (e.g., a line graph showing "Push-Up Max: 12 → 15").
+
+Tech Stack:
+
+Frontend: React.js + Three.js (for 3D models) + GSAP (for elegant UI animations) + a premium TTS library.
+
+Backend: Firebase Anonymous Auth (optional for persistent data) + LocalStorage (for a zero-login experience).
+
+Media: High-quality 3D assets for the animated trainer.
+
+Sample Output Request:
+"Provide a JSON structure for a 15-min EMOM workout (exercises, durations, AI voice scripts) and a detailed visual mockup of the live training view (timer, central 3D model, voice toggle button). Highlight how the AI adjusts for a user who fails reps mid-session."
+
+3 Unique Selling Points (USPs):
+
+Aesthetic & Intuitive UI: A seamless, visually stunning experience that feels as polished as a premium product.
+
+AI Coach with a Soul: A natural-sounding voice paired with a lifelike 3D model creates the feeling of a personal trainer.
+
+Adaptive Intelligence: The platform learns from your performance and feedback, intelligently tailoring future workouts.
+
+Tone:
+"An elite, minimalist fitness platform where every detail is designed to help you focus on your form and progress."
+
+Refinements:
+
+Premium Typography: Use a clean, crisp font like Inter or a custom typeface to ensure text is highly legible and visually appealing.
+
+Standout Logo: The logo is a modern, memorable icon that reflects the brand's commitment to precision and strength.
+
+Immersive Demo Mode: An optional, captivating intro sequence that showcases the 3D model and AI voice, giving users a taste of the premium experience.
+
+Mobile-First Design: The entire platform is optimized for mobile, with every button, animation, and layout element designed for a perfect user experience on a small screen.
