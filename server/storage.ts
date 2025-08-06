@@ -73,8 +73,10 @@ export class MemStorage implements IStorage {
     const userProfile: UserProfile = { 
       ...profile, 
       id,
+      userId: profile.userId,
       height: profile.height ?? null,
-      weight: profile.weight ?? null
+      weight: profile.weight ?? null,
+      goals: profile.goals as string[]
     };
     this.userProfiles.set(id, userProfile);
     return userProfile;
@@ -99,6 +101,7 @@ export class MemStorage implements IStorage {
       ...insertWorkout, 
       id,
       userId: insertWorkout.userId ?? null,
+      exercises: insertWorkout.exercises as any,
       createdAt: new Date().toISOString()
     };
     this.workouts.set(id, workout);
@@ -120,6 +123,7 @@ export class MemStorage implements IStorage {
       workoutId: insertSession.workoutId ?? null,
       duration: insertSession.duration ?? null,
       feedback: insertSession.feedback ?? null,
+      exercisesCompleted: insertSession.exercisesCompleted as any,
       completedAt: new Date().toISOString()
     };
     this.workoutSessions.set(id, session);
