@@ -8,6 +8,27 @@ CalisthenIQ is a freemium calisthenics website that provides personalized workou
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes (December 2025)
+
+### Comprehensive 12-Week Progression System Implementation
+- **Date**: December 2025
+- **Changes**: Integrated complete 12-week calisthenics progression plan based on attached user schedule
+- **Elite Exercise Database**: Built comprehensive exercise library with progressive paths:
+  - Push progression: Normal → Diamond → Archer → One-Arm Push-Ups (12-week path)
+  - Pull progression: Australian → Negatives → Assisted → Full Pull-Ups (12-week path) 
+  - Squat progression: Bodyweight → Deep → Bulgarian Split → Box Pistol → Pistol Squats (12-week path)
+- **Military Drill Sergeant Coaching**: Implemented voice coaching system with motivational callouts
+- **Weekly Schedule Structure**: 
+  - Monday: Full Body Strength (60 min triplets)
+  - Tuesday: Push Emphasis (45 min)
+  - Wednesday: Pull Emphasis (45 min)
+  - Thursday: Active Recovery (45 min mobility)
+  - Friday: Squat Emphasis (45 min)
+  - Saturday: Skill Integration (30 min combinations)
+  - Sunday: Complete Rest
+- **Adaptive Difficulty**: Automatic adjustment based on user fitness level (beginner/intermediate/advanced)
+- **Zero-Barrier Entry**: Maintains instant workout generation with no account requirements
+
 ## System Architecture
 
 ### Frontend Architecture
